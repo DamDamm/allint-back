@@ -1,5 +1,5 @@
 const userRouter = express.Router();
 
-userRouter.get('/', isLogged(), userCtrl.get);
-userRouter.patch('/', isLogged(), userCtrl.path);
-userRouter.delete('/', isLogged(), userCtrl.delete);
+userRouter.get('/', isLogged(), userController.get);
+userRouter.patch('/', isLogged(), userController.path);
+userRouter.delete('/', isLogged(), useruserController.delete);

@@ -1,4 +1,4 @@
-const sequelize = require('../utils/sequelize');
+const { sequelize, DataTypes } = require('../utils/sequelize');
 
 module.exports = sequelize.define('User', {
   // Model attributes are defined here
