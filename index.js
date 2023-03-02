@@ -1,15 +1,16 @@
 require('dotenv').config();
 
 const express = require('express');
-const logger = require('./app/helpers/logger');
-const router = require('./app/routers/index');
+const exceptionMiddleware = require('./app/middlewares/exceptionMiddleware');
+const routers = require('./app/routers/index');
 
 const port = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(router);
+app.use(exceptionMiddleware);
+routers(app);
 
 app.listen(port, () => {
-  logger.log(`Server ready: http://localhost:${port}`);
+  console.log(`Server ready: http://localhost:${port}`);
 });
