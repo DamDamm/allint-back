@@ -1,5 +1,5 @@
 const User = require('../models/user');
-const sequelize = require('../utils/sequelize');
+// const sequelize = require('../utils/sequelize');
 
 module.exports.get = async function (req, res) {
   const { id } = req.token;
